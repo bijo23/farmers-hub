@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer's Hub - Your Agricultural Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Farmer's Hub Logo">
+                <span>Farmer's Hub</span>
+            </a>
+            <div class="nav-links">
+                <a href="#weather"><i class="fas fa-cloud-sun"></i> Weather</a>
+                <a href="#seeds"><i class="fas fa-seedling"></i> Seeds/Fertilizer</a>
+                <a href="#schemes"><i class="fas fa-file-invoice-dollar"></i> Schemes</a>
+                <a href="#news"><i class="fas fa-newspaper"></i> News</a>
+                <a href="#feedback"><i class="fas fa-comment-dots"></i> Feedback</a>
+                <a href="#" id="loginBtn"><i class="fas fa-user"></i> Login</a>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Empowering Farmers with Technology</h1>
+                <p>Get weather forecasts, seed information, government schemes, and agricultural news all in one place.</p>
+                <div class="hero-buttons">
+                    <a href="#register" class="btn btn-primary">Register Now</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/farmer-hero.png" alt="Happy Farmer">
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section id="weather" class="section weather-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-cloud-sun"></i> Weather Forecast</h2>
+            <div class="weather-container">
+                <div class="weather-card current-weather">
+                    <h3>Current Weather</h3>
+                    <div class="weather-info">
+                        <div class="weather-icon">
+                            <i class="fas fa-sun"></i>
+                            <span>Sunny</span>
+                        </div>
+                        <div class="weather-details">
+                            <div class="temp">28°C</div>
+                            <div class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="location">Detecting your location...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather-stats">
+                        <div class="stat">
+                            <i class="fas fa-tint"></i>
+                            <span>Humidity: 65%</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-wind"></i>
+                            <span>Wind: 12 km/h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-card forecast">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-days">
+                    </div>
+                </div>
+                <div class="weather-card alerts">
+                    <h3>Weather Alerts</h3>
+                    <div class="alert-list">
+                        <div class="alert-item">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>No severe weather alerts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seeds & Fertilizer Section -->
+    <section id="seeds" class="section seeds-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-seedling"></i> Seeds & Fertilizer</h2>
+            <div class="seeds-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search seeds or fertilizers...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <select>
+                        <option value="">All Crop Types</option>
+                        <option value="cereal">Cereal Crops</option>
+                        <option value="vegetable">Vegetables</option>
+                        <option value="fruit">Fruits</option>
+                    </select>
+                    <select>
+                        <option value="">All Seasons</option>
+                        <option value="kharif">Kharif</option>
+                        <option value="rabi">Rabi</option>
+                        <option value="zaid">Zaid</option>
+                    </select>
+                </div>
+                <div class="products-grid">
+                    <!-- Product cards will be added by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schemes Section -->
+    <section id="schemes" class="section schemes-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-file-invoice-dollar"></i> Government Schemes</h2>
+            <div class="schemes-tabs">
+                <button class="tab-btn active" data-tab="central">Central Schemes</button>
+                <button class="tab-btn" data-tab="state">State Schemes</button>
+                <button class="tab-btn" data-tab="loan">Loan Schemes</button>
+            </div>
+            <div class="schemes-content">
+                <div class="tab-content active" id="central">
+                    <!-- Scheme cards will be added by JavaScript -->
+                </div>
+                <div class="tab-content" id="state">
+                    <!-- State schemes content -->
+                </div>
+                <div class="tab-content" id="loan">
+                    <!-- Loan schemes content -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section news-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-newspaper"></i> Agricultural News</h2>
+            <div class="news-container">
+                <div class="main-news">
+                    <!-- Main news article -->
+                </div>
+                <div class="secondary-news">
+                    <!-- Secondary news articles -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="section feedback-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-comment-dots"></i> Share Your Feedback</h2>
+            <div class="feedback-container">
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="feedbackName">Your Name</label>
+                        <input type="text" id="feedbackName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackEmail">Email</label>
+                        <input type="email" id="feedbackEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackType">Feedback About</label>
+                        <select id="feedbackType" required>
+                            <option value="">Select topic</option>
+                            <option value="website">Website</option>
+                            <option value="weather">Weather Section</option>
+                            <option value="seeds">Seeds/Fertilizer</option>
+                            <option value="schemes">Government Schemes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackMessage">Your Feedback</label>
+                        <textarea id="feedbackMessage" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="star-rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+                <div class="feedback-image">
+                    <img src="images/feedback-farmer.png" alt="Farmer giving feedback">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Register Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Login</button>
+                <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+            <div class="auth-content">
+                <form id="loginForm" action="/login" method="POST" class="auth-form active" data-tab="login">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" name="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" name="password" id="loginPassword" required>
+                    </div>
+                    <div class="form-group remember">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="auth-footer">
+                        <a href="#forgot-password">Forgot Password?</a>
+                    </div>
+                </form>
+                <form id="registerForm" action="/users" method="POST" class="auth-form" data-tab="register">
+                    <div class="form-group">
+                        <label for="regName">Full Name</label>
+                        <input type="text" name="name" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" name="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPhone">Mobile Number</label>
+                        <input type="tel" name="phone" id="regPhone" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <input type="password" name="password" id="regPassword" minlength="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regFarmType">Farm Type</label>
+                        <select id="regFarmType" name="farm_type" required>
+                            <option value="">Select</option>
+                            <option value="crops">Crops</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="poultry">Poultry</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Message</h2>
+            <p id="modalMessage">This is a message.</p>
+            <button onclick="closeModal()" class="modal-btn">OK</button>
+        </div>
+    </div>
+  
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>About Farmer's Hub</h3>
+                    <p>Empowering farmers with technology to improve agricultural productivity and access to information.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#weather">Weather</a></li>
+                        <li><a href="#seeds">Seeds & Fertilizer</a></li>
+                        <li><a href="#schemes">Schemes</a></li>
+                        <li><a href="#news">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@farmershub.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Farm Street, Agriculture City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Farmer's Hub. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        <% if (success != undefined) { %>
+            document.addEventListener("DOMContentLoaded", function() {
+                showModal("<%=success ? 'success': 'error'%>", "<%=msg%>");
+            });
+        <% } %> 
+
+        function showModal(type, message) {
+            const modal = document.getElementById("customModal");
+            const title = document.getElementById("modalTitle");
+            const messageBox = document.getElementById("modalMessage");
+
+            if (type === "success") {
+                title.innerText = "Success!";
+                title.className = "success";
+            } else {
+                title.innerText = "Error!";
+                title.className = "error";
+            }
+
+            messageBox.innerText = message;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("customModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
